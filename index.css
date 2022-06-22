@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;700&family=Roboto+Mono:wght@500;700&display=swap');
+
+
+html {
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP';
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(16, 16, 16);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(100, 120, 255);
+}
+
+p:not(:last-child) {
+    padding-bottom: 8px;
+}
+
+.loadingscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgb(20, 24, 51);
+}
+
+
+.main_container {
+    background-color: rgb(20, 24, 51);
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+}
+
+.main_container > *:not(:last-child) {
+    border-right: 1px solid rgb(100, 100, 100);
+}
+
+nav {
+    width: 255px;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.app_logo > img {
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.page_tabs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page_tabs > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.page_tabs > ul > li {
+    padding: 10px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+
+    font-weight: 700;
+
+    transition-property: background-color;
+    transition-duration: 0.1s;
+}
+
+.page_tabs > ul > li:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content_container {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.pagetitle_box {
+    border-bottom: 1px solid rgb(100, 100, 100);
+}
+
+.pagetitle,
+.contentTitle {
+    padding: 8px 16px;
+}
+
+.content_box {
+    flex: 1;
+
+    overflow-y: auto;
+}
+
+aside {
+    width: 32%;
+    max-width: 400px;
+    overflow-y: auto;
+}
+
+.side_content {
+    padding: 16px;
+}
+
+.develop_info span {
+    display: block;
+}
+
+footer {
+    padding: 16px;
+}
+
+.hamburger {
+    position: fixed;
+    width: 50px;
+}
+
+.hamburger span {
+    width: 50px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.fullScPopup_content_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.fullScPopup {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    
+    background-color: rgb(20, 24, 51);
+    pointer-events: all;
+}
+
+.fullScPopup_open {
+}
+
+@media screen and (max-width: 820px) {
+    aside {
+        display: none;
+    }
+
+    nav {
+        width: 200px;
+    }
+}
+
+/*loading*/
+.loadani_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadani_box {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.loadani {
+    width: 40%;
+    height: 40%;
+    border-radius: 2px;
+    animation: anini 2s infinite ease-in-out;
+    background-color: rgb(100, 120, 255);
+}
+
+.loadani_tl {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation-delay: 0.0s;
+}
+.loadani_tr {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    animation-delay: 0.2s;
+}
+.loadani_br {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    animation-delay: 0.4s;
+}
+.loadani_bl {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    animation-delay: 0.6s;
+}
+
+@keyframes anini {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.25);
+    }
+    80% {
+        transform: scale(1);
+    }
+}

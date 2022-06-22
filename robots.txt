@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+        NotSNS
+    </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:url" content="https://nsns.akurakuu.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NotSNS" />
+    <meta property="og:title" content="NotSNS" />
+    <meta property="og:description" content="不満だって、メモだって、日記だって書ける。そう、NotSNSならね。" />
+    <meta property="og:image" content="https://nsns.akurakuu.com/icons/ogp.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:site" content="@akurakuu" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="manifest" href="manifest.json">
+
+    <script defer src="scripts/index.js"></script>
+    <script src="scripts/pageloader.js"></script>
+    <script src="scripts/fullScPopuploader.js"></script>
+</head>
+
+<body>
+    <div id="main_container" class="main_container">
+        <nav>
+            <div class="app_logo">
+                <img width="50%" src="icons/logo__.svg" alt="logo" class="logo">
+            </div>
+            <div class="page_tabs">
+                <ul>
+                    <li id="home" onclick="changePage('home');">HOME</li>
+                    <li id="profile" onclick="changePage('profile');">PROFILE</li>
+                    <li id="account" onclick="changePage('account');">ACCOUNT</li>
+                </ul>
+                <ul>
+                    <li id="settings" onclick="changePage('settings');">SETTINGS</li>
+                    <li id="help" onclick="changePage('help');">HELP</li>
+                    <li id="about" onclick="changePage('about');">ABOUT</li>
+                    <li id="releasenotes" onclick="changePage('releasenotes');">RELEASE NOTES</li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content_container">
+            <div class="pagetitle_box">
+                <h2 id="pagetitle" class="pagetitle"></h2>
+            </div>
+            <div id="content_box" class="content_box"></div>
+        </div>
+        <!--<aside>
+        </aside>-->
+    </div>
+
+    <div id="loadingscreen" class="loadingscreen">
+        <span class="loadani_container">
+            <span class="loadani_box">
+                <span class="loadani loadani_tl"></span>
+                <span class="loadani loadani_tr"></span>
+                <span class="loadani loadani_br"></span>
+                <span class="loadani loadani_bl"></span>
+            </span>
+        </span>
+
+        <noscript style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgb(30, 30, 40);
+        ">
+            <span>javascriptをONにするか、javascriptが動作するブラウザを使用してください。</span>
+            <ul>
+                <li><a href="https://www.google.com/intl/ja/chrome/">Google Chrome</a></li>
+                <li><a href="https://www.mozilla.org/ja/firefox/new/">Mozilla Firefox</a></li>
+                <li><a href="https://www.microsoft.com/ja-jp/windows/microsoft-edge">Microsoft Edge</a></li>
+                <li><a href="https://vivaldi.com/ja-ks/">Vivaldi</a></li>
+                <li><a href="https://www.opera.com/">Opera</a></li>
+                <li><a href="https://www.opera.com/gx">Opera GX</a></li>
+                <li><a href="https://blisk.io/">Blisk</a></li>
+                <li><a href="https://browser.yandex.com/">Yandex Browser</a></li>
+                <li><a href="https://browser.ru/">Atom Browser</a></li>
+                <li><a href="https://floorp.ablaze.one/">Ablaze Floorp</a></li>
+                <li><a href="https://www.monochrome.tk/mncr/project/monot/">Monochrome Monot</a></li>
+            </ul>
+        </noscript>
+    </div>
+
+
+</body>
+
+</html>

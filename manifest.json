@@ -1,0 +1,15 @@
+{
+    "name": "NotSNS",
+    "short_name": "NSNS",
+    "start_url": "/index.html#home",
+    "display": "standalone",
+    "background_color": "rgb(10, 10, 20)",
+    "description": "このアプリケーションは一見SNSのようなUIをしていますが、 あえて第三者とつながらないようになっています。驚いたでしょう？",
+    "icons": [
+        {
+            "src": "icons/logo__.svg",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ]
+}
